@@ -1,11 +1,11 @@
 import Header from "./Components/Header";
-import News from "./Components/Main";
+import Body from "./Components/Body";
 
 function App() {
   return (
     <div>
-      <Header/>
-      <News />
+      <Header />
+      <Body />
     </div>
   );
 }
