@@ -26,21 +26,20 @@
 .wrapper {
   display: flex;
   justify-content: center;
+  flex-direction: column;
 }
 .card {
   display: flex;
   width: 900px;
-  margin: 100px auto 0px;
+  margin: 50px auto 0px;
   border-radius: 3px;
   padding: 10px;
-  gap: 10px;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16);
 }
 
 .card > img {
-  width: 300px;
+  min-width: 300px;
   height: 300px;
-  object-fit: cover;
   border-radius: 4px;
 }
 
@@ -68,11 +67,16 @@
   font-size: 16px;
   font-weight: 300;
   line-height: 22px;
-  margin-bottom: 30px;
+  height: 180px;
 }
 
 .source {
   font-size: 12px;
   font-weight: 400;
   margin-bottom: 12px;
+}
+a{
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
 }
