@@ -1,28 +1,33 @@
 import React, { useEffect, useState } from "react";
+import { getNews } from "inshorts-news-api";
 import NewsCard from "./NewsCard";
 
 const Body = () => {
   const [news, setNews] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
+  let options = {
+    language: "en",
+    category: "",
+  };
+
+  const fetchData = async () => {
+    const data = await getNews(options);
+    setNews(data.news);
+    setIsLoading(false);
+  };
+
   useEffect(() => {
     fetchData();
   }, []);
 
-  const fetchData = async () => {
-    const res = await fetch(
-      "https://www.inshorts.com/api/en/news?category=top_stories&max_limit=10&include_card_data=true"
-    );
-    const data = await res.json();
-    setNews(data.data.news_list);
-    setIsLoading(false);
-  };
-
   return (
     <div className="wrapper">
-      {isLoading ? <h1>Loading....</h1> : news.map((curr) => (
-        <NewsCard key={curr.hash_id} data={curr.news_obj} />
-      ))}
+      {isLoading ? (
+        <h1>Loading....</h1>
+      ) : (
+        news.map((curr) => <NewsCard key={curr.hash_id} data={curr.news_obj} />)
+      )}
       {/* {isLoading ? <h1>Loading....</h1> : <NewsCard data={news} />} */}
     </div>
   );
