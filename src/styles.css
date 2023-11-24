@@ -1,13 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto:wght@300&display=swap");
-
+/* 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Roboto";
-}
+} */
 
-.header {
+/* .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -19,7 +18,7 @@
 
 .menu-icon {
   margin-left: 20px;
-}
+} */
 .wrapper {
   display: flex;
   justify-content: center;
@@ -72,8 +71,8 @@
   font-weight: 400;
   margin-bottom: 12px;
 }
-a{
+/* a{
   text-decoration: none;
   font-weight: bold;
   color: black;
-}
+} */

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { getNews } from "inshorts-news-api";
+import { getPosts, getMorePosts } from "./API/coreApi";
 import NewsCard from "./NewsCard";
 
 const Body = () => {
@@ -13,6 +14,7 @@ const Body = () => {
 
   const fetchData = async () => {
     const data = await getNews(options);
+    console.log(data);
     setNews(data.news);
     setIsLoading(false);
   };
