@@ -24,7 +24,7 @@ const Body = () => {
   }, []);
 
   return (
-    <div className="wrapper">
+    <div className="wrapper flex gap-4 flex-col items-center">
       {isLoading ? (
         <h1>Loading....</h1>
       ) : (

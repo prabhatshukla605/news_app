@@ -6,7 +6,7 @@ import logo from "../logo.jpg";
 
 const Header = () => {
   return (
-    <div className="bg-zinc-800 text-white py-4">
+    <div className="bg-zinc-800 text-white py-4 flex">
       <div className="flex items-center justify-between mx-auto w-10/12">
         <a href="#" className="text-3xl font-bold">
           <span className="text-yellow-300 ">News</span>Hunt
