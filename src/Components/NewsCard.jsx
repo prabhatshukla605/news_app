@@ -10,15 +10,15 @@ const NewsCard = ({ data }) => {
   const day = date.toLocaleDateString("en-IN", { weekday: "long" });
 
   return (
-    <div className="bg-yellow-300 flex gap-3 w-10/12 h-80 p-4 rounded-md">
+    <div className="bg-yellow-300 flex gap-4 w-10/12 h-80 p-4 rounded-md">
       <img className="w-80 rounded-md" src={data.image_url} alt="Image" />
-      <div className="p-2.5">
+      <div className="flex flex-col gap-3">
         <h2 className="text-2xl font-bold">{data.title}</h2>
         <p className="font-thin">
           {time} on {day}
         </p>
-        <p className="font-semibold">{data.content}</p>
-        <button className="border-2 border-black text-white font-semibold bg-slate-900 rounded-md px-2 py-1">
+        <p className="font-semibold h-40 max-h-40">{data.content}</p>
+        <button className="border-2 border-black text-white font-semibold bg-slate-900 rounded-md px-2 py-1 w-fit">
           <a className="link" target="_blank" href={data.source_url}>
             Read more
           </a>
