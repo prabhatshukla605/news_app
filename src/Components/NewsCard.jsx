@@ -10,20 +10,19 @@ const NewsCard = ({ data }) => {
   const day = date.toLocaleDateString("en-IN", { weekday: "long" });
 
   return (
-    <div className="card">
-      <img src={data.image_url} alt="Image" />
-      <div className="description">
-        <h2 className="headline">{data.title}</h2>
-        <p className="date">
+    <div className="bg-yellow-300 flex gap-3 w-10/12 h-80 p-4 rounded-md">
+      <img className="w-80 rounded-md" src={data.image_url} alt="Image" />
+      <div className="p-2.5">
+        <h2 className="text-2xl font-bold">{data.title}</h2>
+        <p className="font-thin">
           {time} on {day}
         </p>
-        <p className="content">{data.content}</p>
-        <p className="source">
-          read more at
+        <p className="font-semibold">{data.content}</p>
+        <button className="border-2 border-black text-white font-semibold bg-slate-900 rounded-md px-2 py-1">
           <a className="link" target="_blank" href={data.source_url}>
-            {" " + data.source_name}
+            Read more
           </a>
-        </p>
+        </button>
       </div>
     </div>
   );

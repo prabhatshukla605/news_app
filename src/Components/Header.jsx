@@ -12,7 +12,7 @@ const Header = () => {
           <span className="text-yellow-300 ">News</span>Hunt
         </a>
         <div className="flex gap-10 items-center">
-          <div class="inline-flex rounded-lg shadow-sm">
+          <div className="inline-flex rounded-lg shadow-sm">
             <button className=" bg-zinc-600 border-2 border-gray-400 rounded-l-md p-2">
               ENG
             </button>

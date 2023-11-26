@@ -24,7 +24,7 @@
   justify-content: center;
   flex-direction: column;
 } */
-.card {
+/* .card {
   display: flex;
   width: 900px;
   border-radius: 3px;
@@ -70,7 +70,7 @@
   font-size: 12px;
   font-weight: 400;
   margin-bottom: 12px;
-}
+} */
 /* a{
   text-decoration: none;
   font-weight: bold;
